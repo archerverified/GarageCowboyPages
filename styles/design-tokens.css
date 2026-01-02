@@ -1,0 +1,404 @@
+/**
+ * Garage Cowboy Design Tokens
+ * Extracted from Figma design system
+ */
+
+:root {
+  /* ========== Colors ========== */
+  
+  /* Brand Colors */
+  --gc-brand-yellow-primary: #fec300;
+  --gc-brand-yellow-secondary: #f7bd15;
+  --gc-brand-dark: #35363a;
+  --gc-brand-black: #222222;
+  
+  /* Neutral Colors */
+  --gc-black: #000000;
+  --gc-black-soft: #303135;
+  --gc-gray-dark: #323232;
+  --gc-gray-medium: #8b8b92;
+  --gc-gray-light: #eaeaea;
+  --gc-white: #ffffff;
+  
+  /* Transparent/Overlay Colors */
+  --gc-overlay-light: rgba(255, 255, 255, 0.5);
+  --gc-overlay-dark: rgba(0, 0, 0, 0.25);
+  --gc-text-muted: rgba(48, 49, 53, 0.75);
+  --gc-text-gradient-start: rgba(63, 63, 63, 0.22);
+  --gc-text-gradient-end: #000000;
+  
+  /* Semantic Colors */
+  --gc-background: #ffffff;
+  --gc-text-primary: #323232;
+  --gc-text-secondary: rgba(48, 49, 53, 0.75);
+  --gc-text-on-dark: #eaeaea;
+  --gc-border-primary: #303135;
+  --gc-border-dark: #35363a;
+  --gc-border-subtle: #8b8b92;
+  
+  /* ========== Typography ========== */
+  
+  /* Font Families */
+  --gc-font-primary-black: 'Product_Sans_Black:Regular', sans-serif;
+  --gc-font-primary-bold: 'Product_Sans:Bold', sans-serif;
+  --gc-font-primary-medium: 'Product_Sans_Medium:Regular', sans-serif;
+  --gc-font-primary-regular: 'Product_Sans:Regular', sans-serif;
+  --gc-font-primary-light: 'Product_Sans_Light:Regular', sans-serif;
+  --gc-font-secondary-italic: 'PT_Sans:Italic', sans-serif;
+  --gc-font-tertiary: 'Montserrat:Italic', sans-serif;
+  --gc-font-tertiary-extrabold: 'Montserrat:ExtraBold', sans-serif;
+  
+  /* Font Sizes */
+  --gc-font-size-hero: 52px;
+  --gc-font-size-h1: 48px;
+  --gc-font-size-h2: 28px;
+  --gc-font-size-h3: 24px;
+  --gc-font-size-h4: 22px;
+  --gc-font-size-h5: 20px;
+  --gc-font-size-base: 15px;
+  --gc-font-size-label: 13px;
+  --gc-font-size-small: 12px;
+  
+  /* Line Heights */
+  --gc-line-height-hero: 52px;
+  --gc-line-height-h1: 42px;
+  --gc-line-height-h2: 36px;
+  --gc-line-height-h3: 28px;
+  --gc-line-height-base: 27.2px;
+  --gc-line-height-body: 26px;
+  --gc-line-height-tight: 10px;
+  --gc-line-height-normal: normal;
+  
+  /* Letter Spacing */
+  --gc-letter-spacing-tight: -0.32px;
+  --gc-letter-spacing-normal: 0;
+  
+  /* ========== Spacing ========== */
+  
+  /* Gap Sizes */
+  --gc-gap-xl: 50px;
+  --gc-gap-lg: 32px;
+  --gc-gap-md: 24px;
+  --gc-gap-sm: 14px;
+  --gc-gap-xs: 12px;
+  --gc-gap-xxs: 10px;
+  --gc-gap-tiny: 5px;
+  
+  /* Padding */
+  --gc-padding-section-x: 101px;
+  --gc-padding-button-x: 32px;
+  --gc-padding-button-y: 17px;
+  --gc-padding-button-lg-x: 60px;
+  --gc-padding-button-lg-y: 16px;
+  --gc-padding-input-x: 14px;
+  --gc-padding-input-y: 17px;
+  --gc-padding-form: 10px;
+  --gc-padding-container: 20px;
+  
+  /* Margins */
+  --gc-margin-section: 103px;
+  
+  /* ========== Border Radius ========== */
+  
+  --gc-radius-xl: 20px;
+  --gc-radius-lg: 15px;
+  --gc-radius-md: 10px;
+  --gc-radius-sm: 5px;
+  
+  /* ========== Borders ========== */
+  
+  /* Border Widths */
+  --gc-border-width-heavy: 4px;
+  --gc-border-width-lg: 3px;
+  --gc-border-width-md: 2px;
+  --gc-border-width-sm: 1.5px;
+  
+  /* Border Styles (Combined) */
+  --gc-border-heavy: 4px solid #000000;
+  --gc-border-standard: 3px solid #303135;
+  --gc-border-button: 2px solid #35363a;
+  --gc-border-input: 2px solid #303135;
+  --gc-border-textarea: 2px solid #222222;
+  --gc-border-subtle: 1.5px solid #8b8b92;
+  
+  /* ========== Shadows ========== */
+  
+  /* Box Shadows */
+  --gc-shadow-button: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  --gc-shadow-input: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  --gc-shadow-submit: 0px 2px 5px 0px #535458;
+  --gc-shadow-section: 0px 1px 0px 0px rgba(17, 17, 26, 0.05), 0px 0px 8px 0px rgba(17, 17, 26, 0.1);
+  
+  /* Text Shadows */
+  --gc-text-shadow-sm: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  --gc-text-shadow-lg: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  
+  /* ========== Layout ========== */
+  
+  /* Container Widths */
+  --gc-width-max: 1920px;
+  --gc-width-content: 1292px;
+  --gc-width-form: 1140px;
+  --gc-width-nav: 954px;
+  
+  /* Component Heights */
+  --gc-height-header: 207px;
+  --gc-height-nav: 137px;
+  --gc-height-hero: 659px;
+  --gc-height-form: 279px;
+  --gc-height-testimonial: 342px;
+  --gc-height-button-sm: 59px;
+  --gc-height-button-lg: 85px;
+  --gc-height-input: 120px;
+  --gc-height-textarea: 100px;
+  
+  /* Form Column Widths */
+  --gc-form-col-sm: 285px;
+  --gc-form-col-md: 342px;
+  --gc-form-col-button: 228px;
+  
+  /* Icon Sizes */
+  --gc-icon-social: 55.994px;
+  --gc-icon-phone: 40px;
+  --gc-icon-verified: 32.5px;
+  --gc-icon-arrow: 18px;
+  --gc-icon-sm: 25px;
+  --gc-icon-xs: 20px;
+  --gc-icon-dot: 10px;
+  
+  /* Logo Sizes */
+  --gc-logo-width: 414px;
+  --gc-logo-height: 153.719px;
+  --gc-emergency-width: 209.242px;
+  --gc-emergency-height: 81.354px;
+  
+  /* ========== Component-Specific ========== */
+  
+  /* Buttons */
+  --gc-button-primary-bg: var(--gc-brand-yellow-primary);
+  --gc-button-primary-border: var(--gc-border-button);
+  --gc-button-primary-shadow: var(--gc-shadow-button);
+  --gc-button-primary-radius: var(--gc-radius-xl);
+  --gc-button-submit-radius: var(--gc-radius-sm);
+  
+  /* Navigation */
+  --gc-nav-bg: var(--gc-brand-dark);
+  --gc-nav-border: var(--gc-border-heavy);
+  --gc-nav-radius-top: var(--gc-radius-xl);
+  --gc-nav-text: #ffffff;
+  --gc-nav-text-active: var(--gc-gray-light);
+  
+  /* Form Elements */
+  --gc-form-bg: var(--gc-brand-yellow-secondary);
+  --gc-input-bg: var(--gc-overlay-light);
+  --gc-input-border: var(--gc-border-input);
+  --gc-input-shadow: var(--gc-shadow-input);
+  --gc-input-radius: var(--gc-radius-sm);
+  --gc-placeholder-color: var(--gc-text-muted);
+  
+  /* Cards */
+  --gc-card-radius: var(--gc-radius-lg);
+  --gc-card-border: var(--gc-border-md);
+  --gc-card-bg: var(--gc-white);
+  
+  /* Testimonials */
+  --gc-testimonial-bg: var(--gc-white);
+  --gc-testimonial-border: var(--gc-border-standard);
+  --gc-testimonial-shadow: var(--gc-shadow-section);
+  
+  /* Carousel */
+  --gc-carousel-dot-size: var(--gc-icon-dot);
+  --gc-carousel-dot-gap: var(--gc-gap-xs);
+  --gc-carousel-dot-radius: var(--gc-radius-sm);
+  --gc-carousel-dot-active: var(--gc-black);
+  --gc-carousel-dot-inactive-opacity: 0.2;
+  
+  /* ========== Opacity Values ========== */
+  
+  --gc-opacity-inactive: 0.2;
+  --gc-opacity-muted: 0.75;
+  --gc-opacity-overlay: 0.5;
+  --gc-opacity-full: 1;
+  
+  /* ========== Z-Index Scale ========== */
+  
+  --gc-z-base: 0;
+  --gc-z-overlay: 1;
+  --gc-z-dropdown: 10;
+  --gc-z-nav: 50;
+  --gc-z-modal: 100;
+  
+  /* ========== Transitions ========== */
+  
+  --gc-transition-fast: 150ms ease-in-out;
+  --gc-transition-normal: 250ms ease-in-out;
+  --gc-transition-slow: 350ms ease-in-out;
+  
+  /* ========== Breakpoints ========== */
+  
+  --gc-breakpoint-mobile: 768px;
+  --gc-breakpoint-tablet: 1024px;
+  --gc-breakpoint-desktop: 1280px;
+  --gc-breakpoint-wide: 1920px;
+}
+
+/* ========== Utility Classes ========== */
+
+.gc-container {
+  max-width: var(--gc-width-max);
+  margin-inline: auto;
+  padding-inline: var(--gc-padding-section-x);
+}
+
+.gc-content {
+  max-width: var(--gc-width-content);
+  margin-inline: auto;
+}
+
+.gc-text-shadow-sm {
+  text-shadow: var(--gc-text-shadow-sm);
+}
+
+.gc-text-shadow-lg {
+  text-shadow: var(--gc-text-shadow-lg);
+}
+
+.gc-gradient-text {
+  background: linear-gradient(to bottom, var(--gc-text-gradient-start), var(--gc-text-gradient-end) 5.769%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== Typography Utilities ========== */
+
+.gc-font-hero {
+  font-family: var(--gc-font-primary-black);
+  font-size: var(--gc-font-size-hero);
+  line-height: var(--gc-line-height-hero);
+}
+
+.gc-font-h1 {
+  font-family: var(--gc-font-primary-bold);
+  font-size: var(--gc-font-size-h1);
+  line-height: var(--gc-line-height-h1);
+}
+
+.gc-font-h2 {
+  font-family: var(--gc-font-primary-bold);
+  font-size: var(--gc-font-size-h2);
+  line-height: var(--gc-line-height-h2);
+}
+
+.gc-font-h3 {
+  font-family: var(--gc-font-primary-bold);
+  font-size: var(--gc-font-size-h3);
+  line-height: var(--gc-line-height-h3);
+}
+
+.gc-font-h4 {
+  font-family: var(--gc-font-primary-bold);
+  font-size: var(--gc-font-size-h4);
+  line-height: var(--gc-line-height-h3);
+}
+
+.gc-font-nav {
+  font-family: var(--gc-font-primary-bold);
+  font-size: var(--gc-font-size-h3);
+  text-transform: uppercase;
+  line-height: var(--gc-line-height-tight);
+}
+
+.gc-font-body {
+  font-family: var(--gc-font-primary-regular);
+  font-size: var(--gc-font-size-base);
+  line-height: var(--gc-line-height-base);
+}
+
+.gc-font-label {
+  font-family: var(--gc-font-primary-medium);
+  font-size: var(--gc-font-size-label);
+}
+
+.gc-font-testimonial {
+  font-family: var(--gc-font-secondary-italic);
+  font-size: var(--gc-font-size-h5);
+  font-style: italic;
+  line-height: var(--gc-line-height-body);
+}
+
+/* ========== Component Classes ========== */
+
+.gc-button-primary {
+  background-color: var(--gc-button-primary-bg);
+  border: var(--gc-button-primary-border);
+  border-radius: var(--gc-button-primary-radius);
+  box-shadow: var(--gc-button-primary-shadow);
+  padding: var(--gc-padding-button-lg-y) var(--gc-padding-button-lg-x);
+  font-family: var(--gc-font-primary-black);
+  font-size: var(--gc-font-size-h3);
+  color: var(--gc-brand-black);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--gc-transition-normal);
+}
+
+.gc-button-submit {
+  border: var(--gc-button-primary-border);
+  border-radius: var(--gc-button-submit-radius);
+  box-shadow: var(--gc-shadow-submit);
+  padding: var(--gc-padding-button-y) var(--gc-padding-button-x);
+  font-family: var(--gc-font-primary-black);
+  font-size: var(--gc-font-size-label);
+  color: var(--gc-black-soft);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--gc-transition-normal);
+}
+
+.gc-input {
+  background-color: var(--gc-input-bg);
+  border: var(--gc-input-border);
+  border-radius: var(--gc-input-radius);
+  box-shadow: var(--gc-input-shadow);
+  padding: var(--gc-padding-input-y) var(--gc-padding-input-x);
+  font-family: var(--gc-font-primary-medium);
+  font-size: var(--gc-font-size-label);
+}
+
+.gc-input::placeholder {
+  color: var(--gc-placeholder-color);
+}
+
+.gc-textarea {
+  background-color: var(--gc-input-bg);
+  border: var(--gc-border-textarea);
+  border-radius: var(--gc-input-radius);
+  box-shadow: var(--gc-input-shadow);
+  padding: var(--gc-padding-input-y) var(--gc-padding-input-x);
+  font-family: var(--gc-font-primary-regular);
+  font-size: var(--gc-font-size-label);
+  min-height: var(--gc-height-textarea);
+  resize: vertical;
+}
+
+.gc-nav {
+  background-color: var(--gc-nav-bg);
+  border: var(--gc-nav-border);
+  border-bottom: none;
+  border-radius: var(--gc-nav-radius-top) var(--gc-nav-radius-top) 0 0;
+  height: var(--gc-height-nav);
+}
+
+.gc-card {
+  background-color: var(--gc-card-bg);
+  border-radius: var(--gc-card-radius);
+  overflow: hidden;
+}
+
+.gc-testimonial {
+  background-color: var(--gc-testimonial-bg);
+  border: var(--gc-testimonial-border);
+  box-shadow: var(--gc-testimonial-shadow);
+  padding: 3px;
+}
